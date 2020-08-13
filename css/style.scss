@@ -123,8 +123,8 @@ input[type="radio"].visually-hidden {
     border-image-slice: 1;
     border-width: 15px;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-    width: 65%;
-    height: 90%;
+    width: 40%;
+    height: 80%;
     z-index: 1;
   }
 
@@ -150,20 +150,19 @@ input[type="radio"].visually-hidden {
 }
 
 
-
-
+$mr: 24px;
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% + 24px);
-  margin-left: -12px;
-  margin-right: -12px;
+  width: calc(100% + #{$mr});
+  margin-left: -$mr/2;
+  margin-right: -$mr/2;
   align-items: center;
 
   &--2 {
     & > .col {
-      width: 49%;
+      width: 50%;     
     }
   }
 
@@ -172,9 +171,21 @@ input[type="radio"].visually-hidden {
       width: 33.33%;
     }
   }
+
+  &--4 {
+    & > .col {
+      width: 25%;
+    }
+  }
+
+  &--6 {
+    & > .col {
+      width: 16.66%;
+    }
+  }
 }
 
 .col {
-  padding: 0 12px;
+  padding: 0 $mr/2;
   margin-bottom: 10px;
 }

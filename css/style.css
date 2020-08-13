@@ -125,8 +125,8 @@ input[type="radio"].visually-hidden {
   border-image-slice: 1;
   border-width: 15px;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  width: 65%;
-  height: 90%;
+  width: 40%;
+  height: 80%;
   z-index: 1;
 }
 
@@ -160,11 +160,19 @@ input[type="radio"].visually-hidden {
 }
 
 .row--2 > .col {
-  width: 49%;
+  width: 50%;
 }
 
 .row--3 > .col {
   width: 33.33%;
+}
+
+.row--4 > .col {
+  width: 25%;
+}
+
+.row--6 > .col {
+  width: 16.66%;
 }
 
 .col {
