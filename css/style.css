@@ -77,10 +77,6 @@ input[type="radio"].visually-hidden {
   color: #ccc;
 }
 
-.header--main {
-  min-height: 500px;
-}
-
 .logo {
   display: block;
   width: 150px;
@@ -104,5 +100,75 @@ input[type="radio"].visually-hidden {
 .promo__wrapper {
   margin: auto;
   max-width: 800px;
+}
+
+.main-text {
+  padding: 50px 0;
+}
+
+.img {
+  position: relative;
+  display: inline-block;
+}
+
+.img img {
+  position: relative;
+  padding: 7% 0 0 7%;
+  z-index: 2;
+}
+
+.img::before {
+  position: absolute;
+  content: '';
+  display: block;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 15px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  width: 65%;
+  height: 90%;
+  z-index: 1;
+}
+
+.img--down_right img {
+  padding: 0 7% 7% 0;
+}
+
+.img--down_right::before {
+  bottom: 0;
+  right: 0;
+}
+
+.grid .item {
+  height: 100px;
+  background-color: #ccc;
+  outline: 1px solid black;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  margin-right: -12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row--2 > .col {
+  width: 49%;
+}
+
+.row--3 > .col {
+  width: 33.33%;
+}
+
+.col {
+  padding: 0 12px;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
