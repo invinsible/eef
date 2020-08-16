@@ -110,7 +110,48 @@ hr {
   max-width: 1330px;
 }
 
-.header--main {
+.btn {
+  padding: 16px;
+  margin: auto;
+  display: block;
+  width: 200px;
+  background-color: #9A268D;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border: 0;
+  outline: none;
+  text-transform: lowercase;
+  text-align: center;
+  -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.btn::after {
+  content: '';
+  margin: 8px auto 0;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.btn:hover {
+  background-color: #38338F;
+}
+
+.m-section {
+  padding: 60px 0;
+}
+
+.m-section h2 {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.site-header--main {
   padding-bottom: 50px;
   min-height: 900px;
   background-color: #0F1326;
@@ -294,6 +335,7 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   font-size: 16px;
+  font-weight: 700;
   color: #38338F;
   text-align: center;
   -webkit-transition: all 0.3s;
@@ -303,10 +345,6 @@ hr {
 .main-about__link:hover {
   color: #fff;
   background-color: #38338F;
-}
-
-.main-numbers {
-  padding: 60px 0;
 }
 
 .main-numbers__item {
@@ -345,15 +383,6 @@ hr {
   margin-bottom: 20px;
   color: #524C9D;
   line-height: 1;
-}
-
-.main-news {
-  padding: 60px 0;
-}
-
-.main-news h2 {
-  margin-bottom: 70px;
-  text-align: center;
 }
 
 .news__img {
@@ -411,6 +440,47 @@ hr {
 .news__date {
   margin-top: auto;
   font-size: 1.3em;
+}
+
+.press {
+  max-height: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.press__item {
+  margin-bottom: 65px;
+  margin-right: 20px;
+  width: 47%;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.press__link {
+  margin-bottom: 20px;
+  display: block;
+  color: #0F1326;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.press__link:hover {
+  color: #38338F;
+}
+
+.press__date {
+  font-size: 0.65em;
+}
+
+.site-footer {
+  padding: 40px 0;
+  margin: auto;
+  max-width: 1080px;
+  border-top: 1px solid #9A268D;
+  text-align: center;
 }
 
 .img {
@@ -482,5 +552,9 @@ hr {
 .col {
   padding: 0 10px;
   margin-bottom: 10px;
+}
+
+.center {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
