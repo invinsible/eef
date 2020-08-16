@@ -74,15 +74,19 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 4em;
   line-height: 1.17;
-  letter-spacing: 1px;
   text-transform: lowercase;
 }
 
 h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 4em;
-  letter-spacing: 1px;
   color: #0F1326;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
   text-transform: lowercase;
 }
 
@@ -218,14 +222,133 @@ hr {
 }
 
 .main-about {
-  padding: 170px 0;   
+  padding: 170px 0 60px;   
   
   &__title {
     margin-bottom: 20px;
   }
 
   &__text {
+    margin-bottom: 35px;
     max-width: 475px;
+  }
+
+  &__list {
+    margin-left: -22px;
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      margin: 0 20px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #38338F;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    padding: 11px 22px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;    
+    color: #38338F;
+    text-align: center;
+    transition: all 0.3s;
+
+    
+
+    &:hover {      
+      color: #fff;
+      background-color: #38338F;
+    }
+  }
+}
+
+.main-numbers {
+  padding: 60px 0; 
+
+  &__item {
+    display: flex;
+  }
+
+  &__num {
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5em;
+    font-family: 'Raleway', serif;
+    color: #fff;
+    background: linear-gradient(180deg, #38338F 0%, #9A268D 100%);
+  }
+
+  &__description {
+    margin-top: 12%;
+    flex-basis: 46%;
+
+    h3 {
+      margin-bottom: 20px;
+      color: #524C9D;
+      line-height: 1;
+    }    
+  }
+}
+
+.main-news {
+  padding: 60px 0;
+
+  h2 {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+}
+
+.news {
+
+  &__link {
+    display: block;
+    color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 15px #0F0F0F;
+    }
+  }
+
+  &__description {
+    padding: 30px 72px 38px 30px;
+    min-height: 325px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #9A268D 0%, #38338F 100%);
+  }
+
+  &__title {    
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 2.1em;
+    text-transform: none;
+  }
+
+  &__date {
+    margin-top: auto;
+    font-size: 1.3em;
   }
 }
 
@@ -274,7 +397,7 @@ hr {
 }
 
 
-$mr: 24px;
+$mr: 20px;
 
 .row {
   display: flex;
