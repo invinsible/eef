@@ -76,6 +76,19 @@ body {
   letter-spacing: 1px;
 }
 
+body.show-menu > .wrapper {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+body.show-menu .menu-wrapper {
+  top: 0%;
+}
+
+body.show-menu .site-header {
+  position: fixed;
+}
+
 h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 4em;
@@ -151,12 +164,16 @@ hr {
   text-align: center;
 }
 
-.site-header--main {
-  padding-bottom: 50px;
-  min-height: 900px;
-  background-color: #0F1326;
+.site-header {
   background: -webkit-gradient(linear, left top, left bottom, from(#38338F), color-stop(50%, #9A268D), color-stop(50%, #0F1326), to(#0F1326));
   background: linear-gradient(180deg, #38338F 0%, #9A268D 50%, #0F1326 50%, #0F1326 100%);
+  z-index: 100;
+}
+
+.site-header--main {
+  position: absolute;
+  width: 100%;
+  background: transparent;
 }
 
 .logo {
@@ -177,11 +194,27 @@ hr {
           align-items: center;
 }
 
-.menu-btn.active {
+.menu-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}
+
+.burger {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.burger::after, .burger::before {
+  content: '';
   position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: 100;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
 }
 
 .menu-wrapper {
@@ -194,10 +227,6 @@ hr {
   z-index: 99;
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
-}
-
-.menu-wrapper.active {
-  top: 0%;
 }
 
 .menu {
@@ -240,8 +269,15 @@ hr {
 }
 
 .promo {
+  padding: 100px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#38338F), color-stop(50%, #9A268D), color-stop(50%, #0F1326), to(#0F1326));
+  background: linear-gradient(180deg, #38338F 0%, #9A268D 50%, #0F1326 50%, #0F1326 100%);
+}
+
+.promo__wrapper {
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #39338F), color-stop(50%, rgba(57, 50, 143, 0.8))), url("/images/promo_bg.png");
+  background: linear-gradient(90deg, #39338F 5%, rgba(57, 50, 143, 0.8) 50%), url("/images/promo_bg.png");
   padding: 0 115px;
-  margin-top: -70px;
   height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,16 +285,9 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #39338F), color-stop(50%, rgba(57, 50, 143, 0.8))), url("/images/promo_bg.png");
-  background: linear-gradient(90deg, #39338F 5%, rgba(57, 50, 143, 0.8) 50%), url("/images/promo_bg.png");
-  color: #fff;
   -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.238253);
           box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.238253);
-}
-
-.promo__wrapper {
-  -ms-flex-preferred-size: 800px;
-      flex-basis: 800px;
+  color: #fff;
   font-size: 20px;
 }
 
