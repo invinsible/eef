@@ -73,7 +73,7 @@ body {
 body.show-menu {
     
   & > .wrapper {
-    filter: blur(4px);
+    filter: blur(15px);
   }
 
   & .menu-wrapper {
@@ -158,9 +158,10 @@ hr {
   }
 }
 
-.site-header {   
-    background: linear-gradient(180deg, #38338F 0%, #9A268D 50%, #0F1326 50%, #0F1326 100%);
-    z-index: 100;
+.site-header {  
+  max-height: 140px;
+  background: linear-gradient(180deg, #38338F 0%, #9A268D 50%, #0F1326 50%, #0F1326 100%);
+  z-index: 100;
 
     &--main {
       position: absolute;
@@ -179,14 +180,14 @@ hr {
   position: relative;
   padding: 0 15px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between;  
 }
 
 
 /***************** ***************/
 .menu-btn {
   position: relative;
+  margin-top: 30px;
   width: 40px;
   height: 40px;            
   background: transparent;
@@ -243,38 +244,57 @@ hr {
   height: 100%;
   background-color: rgba(0, 0 ,0, 0.5);  
   z-index: 99;
-  transition: top 0.5s;  
+  transition: top 0.5s; 
+  
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu {
+  margin-top: 10%;
   display: flex;
   flex-flow: column wrap;
-  max-height: 320px;
+  max-height: 70%;
+  width: 100%;
 
   a {
     color: #fff;
     text-transform: lowercase;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
 
     &:hover {
-      color: blue;
+      color: #fff;
     }
   } 
 
   &__item {
-    margin-bottom: 20px;
-    font-size: 22px;    
+    margin-bottom: 60px;
+    font-size: 38px;   
   }
 
-  &__link {
-    font-weight: bold;
+  &__link {    
+    padding: 10px 15px;      
+    font-family: 'Raleway', sans-serif;    
+
+    &:hover {      
+      background-color: #9A268D;
+    }
   }
 
   &__sub {
     margin-top: 10px;
+    line-height: 1.3;
 
     a {
-      font-size: 0.6em;      
+      padding: 7px 12px;     
+      font-size:0.65em; 
+      
+      &:hover {
+        background-color: #38338F;
+      }
     }
   }  
 }
@@ -313,6 +333,38 @@ hr {
   &__text {
     padding-right: 15px;
     max-width: 440px;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 108px;
+    height: 100px;
+    background: linear-gradient(180deg, #38338F 0%, #9A268D 100%);
+    outline: 0;
+    border: 0;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      position: absolute;
+      top: 47%;
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: #fff;
+      height: 3px;      
+    }
+
+    &::after {
+      left: -130%;
+    }
+
+    &::before {
+      right: -130%;
+    }
   }
 }
 
