@@ -632,12 +632,6 @@ hr {
   right: 0;
 }
 
-.grid .item {
-  height: 100px;
-  background-color: #ccc;
-  outline: 1px solid black;
-}
-
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
