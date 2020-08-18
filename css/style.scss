@@ -551,8 +551,9 @@ hr {
   }
 
   &__link {
-    display: block;
-    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     color: #fff;
     transition: all 0.3s;
 
