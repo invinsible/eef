@@ -536,7 +536,10 @@ hr {
 
 
 .news {
-  margin-bottom: 80px;
+
+  &:last-of-type {
+    margin-bottom: 80px;
+  } 
 
   &__img {
     filter: grayscale(1);
@@ -697,7 +700,7 @@ $mr: 20px;
 
 .col {
   padding: 0 $mr/2;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .center {  

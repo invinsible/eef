@@ -593,7 +593,7 @@ hr {
   line-height: 1;
 }
 
-.news {
+.news:last-of-type {
   margin-bottom: 80px;
 }
 
@@ -757,7 +757,7 @@ hr {
 
 .col {
   padding: 0 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .center {
