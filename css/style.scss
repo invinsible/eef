@@ -103,10 +103,12 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 80px;
   font-family: 'Raleway', sans-serif;
   font-size: 4em;
   color: #0F1326;
   text-transform: lowercase;
+  text-align: center;
 }
 
 h3 {
@@ -123,10 +125,24 @@ hr {
   border: 0;
 }
 
+a:not([class]) {
+  color: #9A268D;
+  border-bottom: 1px solid;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #38338F;
+  }
+}
+
 .container {
     padding: 0 15px;
     margin: 0 auto;    
     max-width: 1330px;
+
+    &--content {
+      max-width: 890px;
+    }
 }
 
 .btn {
@@ -160,12 +176,7 @@ hr {
 }
 
 .m-section {
-  padding: 60px 0;  
-
-  h2 {
-    margin-bottom: 70px;
-    text-align: center;
-  }
+  padding: 60px 0;
 }
 
 .site-header {  
@@ -196,6 +207,13 @@ hr {
   padding: 0 15px;
   display: flex;
   justify-content: space-between;  
+}
+
+.flex-center {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -263,6 +281,46 @@ hr {
 
 /***************** ***************/
 
+.pagination {
+  margin-bottom: 90px;
+
+  &__list {
+    display: flex;
+    align-items: center;   
+  }
+
+  &__item {
+    margin-right: 20px;
+    font-size: 25px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #3A338F;     
+    color: #3A338F;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #38338F;
+      color: #fff;
+    }
+
+    &.current {
+      background: linear-gradient(180deg, #38338F 0%, #9A268D 100%);
+      color: #fff;
+      border: 1px solid #C4C4C4;
+    }
+  }
+}
+
 .menu-wrapper {
   position: fixed;
   top: -100%;
@@ -326,6 +384,7 @@ hr {
     a {
       padding: 7px 12px;     
       font-size:0.65em; 
+      border: 0;
       
       &:hover {
         background-color: #38338F;
@@ -358,8 +417,7 @@ hr {
 
 .top {
   position: relative;
-  padding: 85px 0;
-  margin-bottom: 110px;
+  padding: 85px 0;  
   background-image: url('/images/top_bg.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -474,6 +532,7 @@ hr {
   
   &__title {
     margin-bottom: 20px;
+    text-align: left;
   }
 
   &__text {
@@ -555,6 +614,28 @@ hr {
       color: #524C9D;
       line-height: 1;
     }    
+  }
+}
+
+
+.inner-page {
+  padding: 110px 0 40px;
+
+  h1 {
+    margin-bottom: 45px;
+  }
+  
+  p:not([class]) {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 70px;
+    }
+  }
+
+  .img {
+    margin-bottom: 90px;
+    width: 98%;
   }
 }
 
@@ -641,9 +722,84 @@ hr {
   }
 }
 
+.preview {  
+  margin-bottom: 60px;
+  
+  &__item {
+    margin-bottom: 40px;
+    display: flex;
+    max-width: 860px;
+
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+
+      .preview__img {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__img {
+    margin-right: 20px;
+    flex-basis: 61%;
+    max-width: 310px;    
+    filter: grayscale(1);
+    transition: filter 0.3s;
+  }
+
+  &__right {
+    width: 100%;
+  }
+
+  &__title {
+    height: 140px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 38px;
+    text-transform: none;
+  }
+
+  &__date {
+    font-size: 25px;
+  }
+
+  &__link {
+    font-size: 15px;
+    font-weight: bold;
+    color: #9A268D;
+    transition: color 0.3s;
+    
+    &::after {
+      content: '';
+      display: block;
+      margin: 6px auto 0;
+      width: 50px;
+      height: 3px;
+      background-color: #9A268D;
+      transition: background-color 0.3s;
+    }
+
+    &:hover {
+      color: #38338F;
+
+      &::after {
+        background-color: #38338F;
+      }
+    }
+  }
+}
+
 .site-footer {
-  padding: 40px 0; 
-  margin: auto;
+  padding: 40px 0;  
+  margin: 80px auto 0;
   max-width: 1080px;
   border-top: 1px solid #9A268D;
   text-align: center;
@@ -671,6 +827,7 @@ hr {
     width: 50%;
     height: 75%;
     z-index: 1;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
   }
 
   &--down_right {
