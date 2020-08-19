@@ -304,6 +304,7 @@ hr {
     font-size: 38px; 
     
     @media (max-width: 900px) {
+      position: initial;
       margin-bottom: 45px;
       font-size: 36px;
     }
@@ -341,8 +342,7 @@ hr {
 
     @media (max-width: 900px) {
       position: absolute;
-      top: 100%;
-      left: 0;
+      top: 100%;      
       opacity: 0;
       pointer-events: none;
       transition: top 0.3s, opacity 0.4s;
@@ -350,6 +350,7 @@ hr {
   }
   
   @media(max-width: 900px) {
+    position: relative;
     max-height: 100%;
     align-items: center;
   }

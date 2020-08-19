@@ -334,6 +334,7 @@ hr {
 
 @media (max-width: 900px) {
   .menu__item {
+    position: initial;
     margin-bottom: 45px;
     font-size: 36px;
   }
@@ -372,7 +373,6 @@ hr {
   .menu .submenu {
     position: absolute;
     top: 100%;
-    left: 0;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: top 0.3s, opacity 0.4s;
@@ -382,6 +382,7 @@ hr {
 
 @media (max-width: 900px) {
   .menu {
+    position: relative;
     max-height: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
