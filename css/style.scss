@@ -249,6 +249,18 @@ hr {
   top: 10px;
 }
 
+.show-xs {
+  display: none;
+
+  @media(max-width: 900px) {
+    display: block;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 /***************** ***************/
 
 .menu-wrapper {
@@ -317,12 +329,23 @@ hr {
       &:hover {
         background-color: #38338F;
       }
+    }    
+  }
+
+  .submenu {
+    &.show-sub {
+      top: 0;
+      opacity: 1;
+      pointer-events: all;
     }
 
     @media (max-width: 900px) {
       position: absolute;
+      top: 100%;
+      left: 0;
       opacity: 0;
       pointer-events: none;
+      transition: top 0.3s, opacity 0.4s;
     }
   }
   
