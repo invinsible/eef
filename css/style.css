@@ -949,7 +949,7 @@ a:not([class]):hover {
 }
 
 .signup {
-  padding: 15px 110px;
+  padding: 44px 110px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -962,15 +962,32 @@ a:not([class]):hover {
   background: -webkit-gradient(linear, left top, right top, color-stop(5%, #39338F), color-stop(50%, rgba(57, 50, 143, 0.8))), url("/images/signup_bg.png");
   background: linear-gradient(90deg, #39338F 5%, rgba(57, 50, 143, 0.8) 50%), url("/images/signup_bg.png");
   background-repeat: no-repeat;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .signup__title {
-  font-size: 85px;
+  font-size: 72px;
+  line-height: 1.18;
   font-family: 'Raleway', sans-serif;
   color: #fff;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .signup__title {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup__title {
+    font-size: 49px;
+    margin-bottom: 45px;
+  }
 }
 
 .signup__form {
@@ -980,6 +997,13 @@ a:not([class]):hover {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media (max-width: 430px) {
+  .signup__form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .signup__btn {
@@ -992,6 +1016,24 @@ a:not([class]):hover {
   text-align: center;
   border: 0;
   outline: 0;
+  cursor: pointer;
+}
+
+.signup__btn:hover {
+  background: #38338F;
+}
+
+@media (max-width: 768px) {
+  .signup__btn {
+    width: 115px;
+  }
+}
+
+@media (max-width: 430px) {
+  .signup__btn {
+    margin: auto;
+    height: 43px;
+  }
 }
 
 .signup__input {
@@ -999,6 +1041,7 @@ a:not([class]):hover {
   max-width: 330px;
   padding: 9px 26px;
   font-size: 15px;
+  color: #0F1326;
 }
 
 .signup__input::-webkit-input-placeholder {
@@ -1015,6 +1058,35 @@ a:not([class]):hover {
 
 .signup__input::placeholder {
   color: #C4C4C4;
+}
+
+@media (max-width: 768px) {
+  .signup__input {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 430px) {
+  .signup__input {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .signup {
+    padding: 44px 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
 }
 
 .row {
