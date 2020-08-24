@@ -843,7 +843,49 @@ a:not([class]) {
   }
 }
 
+.signup {
+  padding: 15px 110px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;  
+  background: linear-gradient(90deg, #39338F 5%, rgba(57, 50, 143, 0.8) 50%), url('/images/signup_bg.png');
+  background-repeat: no-repeat;
 
+  &__title {
+    font-size: 85px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    flex: 1;
+  }
+
+  &__form {
+    display: flex;
+    flex: 1; 
+  }
+
+  &__btn {    
+    width: 200px;
+    background: linear-gradient(180deg, #38338F 0%, #9A268D 100%);
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    outline: 0;
+  }
+
+  &__input {    
+    width: 100%;
+    max-width: 330px;
+    padding: 9px 26px;
+    font-size: 15px;
+
+    &::placeholder {      
+      color: #C4C4C4;
+    }
+  }
+}
 
 
 $mr: 20px;
