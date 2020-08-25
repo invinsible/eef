@@ -442,10 +442,59 @@ a:not([class]):hover {
   background-color: #38338F;
 }
 
+@media (max-width: 768px) {
+  .menu__sub a {
+    font-size: 0.55em;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__sub {
+    text-align: center;
+  }
+}
+
+.menu__back {
+  position: absolute;
+  left: -60px;
+  top: 5%;
+  width: 35px;
+  height: 35px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#38338F), to(#9A268D));
+  background: linear-gradient(180deg, #38338F 0%, #9A268D 100%);
+  border: 0;
+  outline: 0;
+}
+
+.menu__back::after, .menu__back::before {
+  position: absolute;
+  left: 50%;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 50px;
+  background-color: #fff;
+}
+
+.menu__back::before {
+  top: -60px;
+}
+
+.menu__back::after {
+  bottom: -60px;
+}
+
 .menu .submenu.show-sub {
   top: 0;
   opacity: 1;
   pointer-events: all;
+}
+
+.menu .submenu .first-link {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 26px;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 900px) {
@@ -517,6 +566,7 @@ a:not([class]):hover {
 }
 
 .promo {
+  position: relative;
   padding: 100px 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#38338F), color-stop(50%, #9A268D), color-stop(50%, #0F1326), to(#0F1326));
   background: linear-gradient(180deg, #38338F 0%, #9A268D 50%, #0F1326 50%, #0F1326 100%);
@@ -537,6 +587,14 @@ a:not([class]):hover {
           box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.238253);
   color: #fff;
   font-size: 20px;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .promo__wrapper {
+    font-size: 16px;
+    height: 300px;
+  }
 }
 
 .promo__title {
@@ -554,6 +612,18 @@ a:not([class]):hover {
   background-color: #fff;
 }
 
+@media (max-width: 768px) {
+  .promo__title:after {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo__title {
+    font-size: 32px;
+  }
+}
+
 .promo__text {
   padding-right: 15px;
   max-width: 440px;
@@ -562,6 +632,7 @@ a:not([class]):hover {
 .promo__arrow {
   position: absolute;
   left: 50%;
+  bottom: 0;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   width: 108px;
@@ -591,6 +662,13 @@ a:not([class]):hover {
 
 .promo__arrow::before {
   right: -130%;
+}
+
+@media (max-width: 768px) {
+  .promo__arrow {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .main-about {
@@ -683,6 +761,14 @@ a:not([class]):hover {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#38338F), to(#9A268D));
   background: linear-gradient(180deg, #38338F 0%, #9A268D 100%);
+}
+
+@media (max-width: 1024px) {
+  .main-numbers__num {
+    width: 125px;
+    height: 125px;
+    font-size: 56px;
+  }
 }
 
 .main-numbers__description {
