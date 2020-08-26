@@ -205,6 +205,12 @@ a:not([class]):hover {
   background: transparent;
 }
 
+@media (max-width: 768px) {
+  .site-header {
+    max-height: 70px;
+  }
+}
+
 .logo {
   display: block;
 }
@@ -272,6 +278,12 @@ a:not([class]):hover {
   top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    margin-top: 14px;
+  }
 }
 
 .burger, .burger::after, .burger::before {
@@ -549,6 +561,18 @@ a:not([class]):hover {
   z-index: 2;
 }
 
+@media (max-width: 768px) {
+  .top__wrapper h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    padding: 49px 0;
+  }
+}
+
 .breadcrumbs {
   position: absolute;
   right: 6%;
@@ -568,6 +592,18 @@ a:not([class]):hover {
 
 .breadcrumbs__link {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs__link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    top: 100%;
+  }
 }
 
 .promo {
@@ -799,6 +835,12 @@ a:not([class]):hover {
 .inner-page .img {
   margin-bottom: 90px;
   width: 98%;
+}
+
+@media (max-width: 768px) {
+  .inner-page {
+    padding: 60px 0 30px;
+  }
 }
 
 .news:last-of-type {
@@ -1289,18 +1331,25 @@ a:not([class]):hover {
 }
 
 .organization__item:hover .organization__img img {
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .organization__img {
   max-width: 310px;
+  min-height: 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid #C4C4C4;
 }
 
 .organization__img img {
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   -webkit-transition: -webkit-filter 0.3s;
   transition: -webkit-filter 0.3s;
   transition: filter 0.3s;
@@ -1311,6 +1360,12 @@ a:not([class]):hover {
   margin-bottom: 10px;
   font-size: 38px;
   line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .organization__title {
+    padding-right: 50px;
+  }
 }
 
 .organization__nation {
@@ -1360,6 +1415,18 @@ a:not([class]):hover {
 
 .row--4 > .col {
   width: 25%;
+}
+
+@media (max-width: 1024px) {
+  .row--4 > .col {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .row--4 > .col {
+    width: 50%;
+  }
 }
 
 .row--6 > .col {

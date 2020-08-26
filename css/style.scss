@@ -195,7 +195,9 @@ a:not([class]) {
       background: transparent;
     }
 
-    
+   @media(max-width: 768px) {
+     max-height: 70px;
+   } 
 }
 
 .logo {
@@ -250,6 +252,10 @@ a:not([class]) {
     top: 0;
     transform: rotate(45deg);
   }
+
+  @media(max-width: 768px) {
+    margin-top: 14px;
+  } 
 }
 
 .burger, .burger::after, .burger::before  {
@@ -488,6 +494,16 @@ a:not([class]) {
   &__wrapper {
     position: relative;
     z-index: 2;
+
+    h1 {
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 49px 0;
   }
 }
 
@@ -505,6 +521,14 @@ a:not([class]) {
 
   &__link {
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    top: 100%;
   }
 }
 
@@ -713,6 +737,10 @@ a:not([class]) {
   .img {
     margin-bottom: 90px;
     width: 98%;
+  }
+
+  @media(max-width: 768px) {
+    padding: 60px 0 30px;
   }
 }
 
@@ -1103,17 +1131,20 @@ a:not([class]) {
 
     &:hover {
       .organization__img img{
-        filter: brightness(1);
+        filter: grayscale(0);
       }
     }
   }
 
   &__img {
     max-width: 310px;
+    min-height: 225px;
+    display: flex;
+    align-items: center;
     border: 1px solid #C4C4C4;
     
     img {
-      filter: brightness(0);
+      filter: grayscale(1);
       transition: filter 0.3s;
     }
   }  
@@ -1122,6 +1153,10 @@ a:not([class]) {
     margin-bottom: 10px;
     font-size: 38px;
     line-height: 1.2;
+
+    @media (max-width: 768px) {
+      padding-right: 50px;
+    }
   }
 
   &__nation {
@@ -1172,6 +1207,14 @@ $mr: 20px;
   &--4 {
     & > .col {
       width: 25%;
+
+      @media(max-width: 1024px) {
+        width: 33.33%
+      }
+
+      @media(max-width: 768px) {
+        width: 50%
+      }
     }
   }
 
