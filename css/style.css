@@ -751,6 +751,36 @@ a:not([class]):hover {
           align-items: center;
 }
 
+.main-about .img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+}
+
+.main-about__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  grid-gap: 30px;
+      grid-template-areas: "img right"     "img down";
+}
+
+.main-about__down {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: down;
+}
+
+.main-about__right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+}
+
 .main-about__title {
   margin-bottom: 20px;
   text-align: left;

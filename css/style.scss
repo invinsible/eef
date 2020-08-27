@@ -649,6 +649,29 @@ a:not([class]) {
   .row {
     align-items: center;
   }
+
+  .img {
+    grid-area: img;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr auto; 
+    grid-gap: 30px;
+
+    grid-template-areas:
+    "img right"    
+    "img down";  
+  }
+
+  &__down {
+    grid-area: down;
+  }
+
+  &__right {
+    grid-area: right;
+  }
   
   &__title {
     margin-bottom: 20px;
