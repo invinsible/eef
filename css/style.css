@@ -160,7 +160,7 @@ a:not([class]):hover {
   max-width: 1350px;
 }
 
-.container--content {
+.container--concept {
   max-width: 890px;
 }
 
@@ -1537,6 +1537,48 @@ a:not([class]):hover {
 .gallery__img:hover img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  lefT: 0;
+  width: 100%;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.carousel .owl-prev,
+.carousel .owl-next {
+  width: 108px;
+  height: 100px;
+  outline: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#38338F), to(#9A268D)) !important;
+  background: linear-gradient(180deg, #38338F 0%, #9A268D 100%) !important;
+  outline: 0;
+  border: 0;
+}
+
+.carousel .owl-prev:hover,
+.carousel .owl-next:hover {
+  background: #38338F !important;
+}
+
+.carousel .owl-prev {
+  margin-left: -50px;
+}
+
+.carousel .owl-next {
+  margin-right: -50px;
 }
 
 .row {

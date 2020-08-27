@@ -151,7 +151,7 @@ a:not([class]) {
     margin: 0 auto;    
     max-width: 1350px;
 
-    &--content {
+    &--concept {
       max-width: 890px;
     }
 
@@ -1286,6 +1286,42 @@ a:not([class]) {
         transform: scale(1.05);
       }
     }
+  }
+}
+
+.carousel {
+  position: relative;
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    lefT: 0;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .owl-prev,
+  .owl-next {
+    width: 108px;
+    height: 100px;
+    outline: 0;
+    background: linear-gradient(180deg, #38338F 0%, #9A268D 100%)!important;
+    outline: 0;
+    border: 0;
+
+    &:hover {
+      background: #38338F!important;
+    }   
+  }
+
+  .owl-prev {
+    margin-left: -50px;
+  }
+
+  .owl-next {
+    margin-right: -50px;
   }
 }
 
