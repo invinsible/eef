@@ -32,3 +32,11 @@ $(".carousel").owlCarousel({
     dots: false,
     nav:true,       
 });
+
+$('.scrollLink').click(function (e){
+    e.preventDefault();
+    //let href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $('.main-about__grid').offset().top
+    }, 1000);
+});
