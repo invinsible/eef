@@ -1336,6 +1336,12 @@ a:not([class]) {
       padding-top: 25px;
     }
 
+    .team-info__name {
+      @media(min-width: 1145px) {
+        min-width: 530px;
+      }
+    }
+
     &--president {
       margin-bottom: 120px;
       max-width: 1075px;
@@ -1382,14 +1388,9 @@ a:not([class]) {
   }
 
   &__name {
-    margin-bottom: 5px;
-    
+    margin-bottom: 5px;    
     font-size: 1.4em;
-    line-height: 1.2;
-
-    @media(min-width: 1145px) {
-      min-width: 530px;
-    }
+    line-height: 1.2;    
   }
 }
 
@@ -1418,6 +1419,32 @@ a:not([class]) {
       height: 13px;
       display: block;
       background: linear-gradient(180deg, #38338F 0%, #9A268D 100%), #C4C4C4;
+    }
+  }
+}
+
+.committees {
+  max-width: 860px;
+
+  &-wrapper {    
+    display: flex;    
+  }
+
+  &-text {
+    margin-bottom: 50px;    
+  }
+
+  &-item {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      margin-right: 25px;
+    }
+
+    @media(max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

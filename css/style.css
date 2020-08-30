@@ -1591,6 +1591,12 @@ a:not([class]):hover {
   padding-top: 25px;
 }
 
+@media (min-width: 1145px) {
+  .team__item .team-info__name {
+    min-width: 530px;
+  }
+}
+
 .team__item--president {
   margin-bottom: 120px;
   max-width: 1075px;
@@ -1648,12 +1654,6 @@ a:not([class]):hover {
   line-height: 1.2;
 }
 
-@media (min-width: 1145px) {
-  .team-info__name {
-    min-width: 530px;
-  }
-}
-
 .ambassador {
   margin-bottom: 60px;
   max-width: 865px;
@@ -1686,6 +1686,45 @@ a:not([class]):hover {
   display: block;
   background: -webkit-gradient(linear, left top, left bottom, from(#38338F), to(#9A268D)), #C4C4C4;
   background: linear-gradient(180deg, #38338F 0%, #9A268D 100%), #C4C4C4;
+}
+
+.committees {
+  max-width: 860px;
+}
+
+.committees-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.committees-text {
+  margin-bottom: 50px;
+}
+
+.committees-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.committees-item img {
+  margin-right: 25px;
+}
+
+@media (max-width: 768px) {
+  .committees-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .social {
