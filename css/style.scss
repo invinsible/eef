@@ -411,6 +411,13 @@ a:not([class]) {
       margin-bottom: 45px;
       font-size: 36px;
     }
+
+    &.active {
+      .menu__link {
+        color: #fff;
+        background-color: #9A268D;
+      }
+    }
   }
 
   &__link {    
@@ -418,7 +425,7 @@ a:not([class]) {
     font-family: 'Raleway', sans-serif;    
 
     &:hover {      
-      background-color: #9A268D;
+      background-color: #38338F;
     }
   }
 
@@ -670,6 +677,10 @@ a:not([class]) {
 
   .img {
     grid-area: img;
+
+    &::before {
+      height: 350px;
+    }
   }
 
   &__grid {
@@ -706,6 +717,7 @@ a:not([class]) {
   }
 
   &__list {
+    margin-top: 25px;
     margin-left: -22px;
     display: flex;
     list-style: none;

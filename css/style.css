@@ -477,13 +477,18 @@ a:not([class]):hover {
   }
 }
 
+.menu__item.active .menu__link {
+  color: #fff;
+  background-color: #9A268D;
+}
+
 .menu__link {
   padding: 10px 15px;
   font-family: 'Raleway', sans-serif;
 }
 
 .menu__link:hover {
-  background-color: #9A268D;
+  background-color: #38338F;
 }
 
 .menu__sub {
@@ -778,6 +783,10 @@ a:not([class]):hover {
   grid-area: img;
 }
 
+.main-about .img::before {
+  height: 350px;
+}
+
 .main-about__grid {
   display: -ms-grid;
   display: grid;
@@ -818,6 +827,7 @@ a:not([class]):hover {
 }
 
 .main-about__list {
+  margin-top: 25px;
   margin-left: -22px;
   display: -webkit-box;
   display: -ms-flexbox;
