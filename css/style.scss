@@ -209,6 +209,13 @@ a:not([class]) {
   }
 }
 
+.flex-center {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .m-section {
   padding: 60px 0;
 
@@ -249,11 +256,17 @@ a:not([class]) {
   justify-content: space-between;  
 }
 
-.flex-center {
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.show-xs {
+  display: none;
+
+  @media(max-width: 900px) {
+    display: block;
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 
@@ -311,17 +324,7 @@ a:not([class]) {
   top: 10px;
 }
 
-.show-xs {
-  display: none;
 
-  @media(max-width: 900px) {
-    display: block;
-  }
-}
-
-.hidden {
-  visibility: hidden;
-}
 
 /***************** ***************/
 
